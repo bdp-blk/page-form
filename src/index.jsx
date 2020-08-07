@@ -12,7 +12,7 @@ import Base from "@<%=proName%>/base/BaseSub";
 import { formatMessage } from "umi/locale";
 import moment from 'moment';
 import { getPlaceholder } from "@/bdpcloud/utils/utils";
-import { Form, Card, Input, Row, Col, Select, TimePicker } from "antd";
+import { Form, Card, Input, Row, Col, Select, DatePicker } from "antd";
 
 @connect(({ <%=moduleName%>, loading }) => ({
   <%=moduleName%>,
@@ -126,7 +126,9 @@ class Index extends Base {
                       },
                     ],
                   })(
-                    <TimePicker
+                    <DatePicker
+                      allowClear
+                      showTime
                       style={{ width: '100%' }}
                       defaultOpenValue={moment('00:00:00', 'HH:mm:ss')}
                     />
