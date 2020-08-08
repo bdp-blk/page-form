@@ -45,7 +45,7 @@ module.exports = function askCreator(template = "") {
       type: "input",
       name: "name",
       message: "页面名Title(cn)",
-      default: '添加表单示范',
+      default: '表单模版页',
     },
   ];
 };
