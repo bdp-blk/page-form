@@ -6,15 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/bdp-block/page-steps.git"
-  },
   "keywords": [],
   "author": "samy <123@gmail.com>",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/bdp-block/page-steps/issues"
-  },
-  "homepage": "https://github.com/bdp-block/page-steps#readme"
+  "license": "ISC"
 }
