@@ -8,7 +8,7 @@
 import React from "react";
 import { connect } from "dva";
 import styles from "./index.less";
-import Base from "@<%=proName%>/base/BaseSub";
+import {BaseSub as Base} from '@<%=proName%>/base';
 import { formatMessage } from "umi/locale";
 import moment from 'moment';
 import { getPlaceholder } from "@/bdpcloud/utils/utils";
