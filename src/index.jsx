@@ -12,7 +12,7 @@ import {BaseSub as Base} from '@<%=proName%>/base';
 import { formatMessage } from "umi/locale";
 import moment from 'moment';
 import { getPlaceholder } from "@/bdpcloud/utils/utils";
-import { Form, Card, Input, Row, Col, Select, DatePicker } from "antd";
+import { Form, Card, Input, Row, Col, Select, DatePicker, Tooltip, Icon } from "antd";
 
 @connect(({ <%=moduleName%>, loading }) => ({
   <%=moduleName%>,
@@ -35,6 +35,10 @@ class Index extends Base {
       labelCol: { span: 8 },
       wrapperCol: { span: 8 },
     };
+    // this.formItemLayout2 = { // 也可以通过6. 12 直接居中；推荐这种简单
+    //   labelCol: { span: 6 },
+    //   wrapperCol: { span: 12 },
+    // };
   }
 
   getRefData() {
@@ -108,8 +112,16 @@ class Index extends Base {
                         message: getPlaceholder(),
                       },
                     ],
-                  })(<Input disabled={disabled} />)}
+                    initialValue: 1,
+                  })(<InputNumber
+                    style={{ width: '100%' }}
+                    disabled={disabled}
+                    placeholder={getPlaceholder()}
+                  />)}
                 </Form.Item>
+                <Tooltip title="格式示范：192.168.1.1" className={styles.tips}>
+                  <Icon type="info-circle" />
+                </Tooltip>
               </Col>
               <Col span={24}>
                 <Form.Item
