@@ -1,9 +1,11 @@
-/**
- * @author samy
- * @email samyzhg#qq.com
- * @create date 2020-08-05 22:05:49
- * @modify date 2020-08-05 22:05:49
- * @desc 表单模版示范
+/*
+ * @Author: <%=author%>
+ * @email: <%=email%>
+ * @time: <%=time%>
+ * @modAuthor: samy
+ * @modTime: 2021-02-10 19:12:43
+ * @desc: <%=name%>页面(by cli)
+ * @Copyright © 2015~2021 BDP FE
  */
 import React from "react";
 import { connect } from "dva";
@@ -63,7 +65,7 @@ class Index extends Base {
     const disabled = viewType === "view";
     return (
       <div className={styles.index}>
-        <Card title="表单模版示范" bordered={false}>
+        <Card title="<%=name%>" bordered={false}>
           <Form {...this.formItemLayout}>
             <Row type="flex" justify="center">
               <Col span={24}>
